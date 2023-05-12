@@ -20,7 +20,7 @@ def edges(image):
 
 # Via la webcam 
 video_capture = cv2.VideoCapture(0) # Creation d'un objet video_capture qui permet de gérer les flux vidéos
-
+                                    # 0 est mis en paramètre pour spécifier l'index de la caméra connectée
 if (video_capture.isOpened() == False): #check si l'ouverture se fait correctement
       print("Error opening the video file")
       
@@ -36,7 +36,7 @@ video_capture.release() # Fermeture de la webcam
 cv2.destroyAllWindows()
 
 # Pour une vidéo externe
-vid_capture = cv2.VideoCapture("/Users/don_williams09/Downloads/Reface Project/IMG_7968.MOV")
+vid_capture = cv2.VideoCapture("input_path")
  
 if (vid_capture.isOpened() == False):
   print("Error opening the video file")
